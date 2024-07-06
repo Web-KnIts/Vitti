@@ -1,0 +1,27 @@
+@import "@fontsource/poppins";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth ;
+  overflow-x: "hidden";
+}
+
+body{
+  font-family: 'Poppins';
+}
+
+input::placeholder{
+  color: #888888;
+  text-transform: capitalize;
+}
+
+#align-text{
+  margin-top: 8px;
+  margin-left: 10px;
+}
+.checkboxIcon path{
+  width: 100%;
+}
