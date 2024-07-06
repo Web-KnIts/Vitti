@@ -17,6 +17,8 @@ width:100%;
 margin:auto;
 padding:100px 0px;
 `
+const responsive = `
+`
 
 const AboutVitti = () => {
   return (
