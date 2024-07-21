@@ -44,9 +44,9 @@ function ConnectTraveler() {
             margin: "auto",
           }}
         >
-           {/*<div>
+           {/* <div>
           <img src="/MobilePhone.png" alt="Mobile-Image" style={{height:"900px",scale:2.8,objectFit:"cover"}} />
-        </div>*/} 
+        </div>  */}
           <div
             style={{
               display: "flex",
@@ -93,10 +93,10 @@ function ConnectTraveler() {
         }}
       >
         <HeadingWrapper>
-          <SecondHeading $color="white" $weight="bold">
+          <SecondHeading $color="white" $weight={400}>
             Discover the true way of travelling
           </SecondHeading>
-          <SmallHeading $color="white" $weight="medium">
+          <SmallHeading $color="white" $weight={200}>
             Check out the different features on our app to become a veteran
             explorer{" "}
           </SmallHeading>

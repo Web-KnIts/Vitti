@@ -42,12 +42,12 @@ const AboutVitti = () => {
             </div>
                 <div style={{display:"flex",flexDirection:"column",gap:"40px"}}>
                 <img src="/vitti.png" alt="" width="100%"/>
-                <Content $size="24px" $color="white">
+                <Content $size="28px" $color="white">
                         <p style={{width:"100%",wordSpacing:"-1px"}}>
                         While travelling around the places travellers usually have “been there and done that” kind of feeling, cause that's the case most of the time when everyone follows the same itineraries and visits the same old and boring places, to solve that problem Vitti comes in the role.
                         </p>
                 </Content>
-                <Content $size="24px" $color="white">
+                <Content $size="28px" $color="white">
                         <p style={{width:"100%",wordSpacing:"-1px"}}>
                         Travelling isn’t just about ticking off places on a list it is more than that, it's about creating memories by visiting places that the masses haven't explored. Enjoying the peace and hearing the stories of the lanes that have been lost under the pile of common attractions. Vitti will help its users experience those places and make even the smallest trips unforgettable.  
                         </p>
@@ -65,8 +65,8 @@ const AboutVitti = () => {
         </HeadingWrapper>  
         <div style={{width:"90%",margin:"auto"}}>
             <img src="/2k24.png" alt="sanskar-founder" style={{width:"100%"}} /> 
-            <Content $size="14px" $color="white">
-                        <p style={{width:"20%",wordSpacing:"-1px"}}>
+            <Content $size="18px" $color="white">
+                        <p style={{width:"20%",wordSpacing:"-1px",marginLeft:"20px"}}>
                         Founded in 2024 by<br/> Sanskar Verma, a <br/>  student and founder of a <br/>  new travel experience.
                         </p>
             </Content>
@@ -85,7 +85,7 @@ const AboutVitti = () => {
         </div>
 
         </Team>
-        <div style={{width:"100%",
+        <div id="contact-us" style={{width:"100%",
           background: "linear-gradient(180deg, rgba(9,67,152,1) 0%, rgba(35,124,255,1) 100%)"}}>
         <HeadingWrapper style={{display:"flex",justifyContent:"space-around",textAlign:"center",width:"80% !important",margin:"auto",padding:"100px 20px"}}>
           <SecondHeading $weight={900} $size="70px" $color="white">

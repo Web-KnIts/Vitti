@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FindSurfExplore from '../../components/FindSurfExplore'
 import TravelPlanner from '../../components/TravelPlanner'
 import ConnectTraveler from '../../components/ConnectTraveler'
@@ -9,10 +9,25 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import Home from '../../components/Home'
 
-function Index() {
+function Index({user}) {
+
+  const [glass,setGlass] = useState(false)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setGlass(true);
+      } else {
+        setGlass(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); 
   return (
     <>
-    <Home/>
+    <Home glass={glass} user={user}/>
     <main>
     <FindSurfExplore/>
     <TravelPlanner/>

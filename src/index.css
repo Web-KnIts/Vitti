@@ -10,7 +10,7 @@
 }
 
 body{
-  font-family: 'Poppins';
+  font-family: 'Visby';
 }
 
 input::placeholder{
@@ -18,10 +18,24 @@ input::placeholder{
   text-transform: capitalize;
 }
 
-#align-text{
+.align-text{
   margin-top: 8px;
   margin-left: 10px;
+  font-weight: normal;
+
 }
 .checkboxIcon path{
   width: 100%;
+}
+
+@font-face {
+  font-family: 'Visby';
+  src: url('../Fonts/visbybold-webfont.woff') format(woff),
+  url('../Fonts/visbybold-webfont.woff2') format(woff2),
+  url('../Fonts/visbysemibold-webfont.woff') format(woff),
+  url('../Fonts/visbysemibold-webfont.woff2') format(woff2),
+  url('../Fonts/visbyregular-webfont.woff') format(woff),
+  url('../Fonts/visbyregular-webfont.woff2') format(woff2),
+  url('../Fonts/visbymedium-webfont.woff') format(woff),
+  url('../Fonts/visbymedium-webfont.woff2') format(woff)
 }

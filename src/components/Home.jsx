@@ -5,38 +5,44 @@ import { Container } from "./FindSurfExplore";
 import { Button, Content } from "./TravelPlanner";
 
 const HomeWrapper = styled.div`
-  padding-bottom: 100px;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 72vw;
-  gap: 30px;
-  margin: auto;
-  align-items: center;
-  flex-direction: column;
+padding-bottom: 100px;
+display: flex;
+justify-content: center;
+height: 100%;
+width: 72vw;
+gap: 30px;
+margin: auto;
+align-items: center;
+flex-direction: column;
+overflow:hidden;
 `;
 
 const BackgroundSelector = styled.div`
-  display: grid;
+  display: flex;
   gap: 10px;
-  grid-template-columns: repeat(4, auto);
+  width:72vw;
 `;
 
 const BackgroundOption = styled.div`
-  min-width: 20vw;
+  min-width: 15vw;
   min-height: 20vh;
   background-color: ${({ color }) => color};
   border-radius: 10px;
   cursor: pointer;
 `;
 
-const Home = () => {
+const Header = styled.header`
+backdrop-filter:blur(2.1px);
+z-index:10;
+transition:background-color .35s ease-in-out;
+`
+const Home = (props) => {
   const [background, setBackground] = useState("red");
   const selectBackground = (color) => {
     setBackground(color);
   };
 
-  const bgOptions = ["red", "black", "green", "yellow"];
+  const bgOptions = ["red", "black", "green", "yellow","orange"];
   useEffect(() => {
     const intervalId = setInterval(() => {
       setBackground(bgOptions[Math.floor(Math.random() * bgOptions.length)]);
@@ -53,22 +59,25 @@ const Home = () => {
           backgroundColor: `linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 80%)`,
           padding: "0px",
           minHeight: "100vh",
+          backgroundSize:"cover",
         }}
       >
-        <header>
-          <Navbar />
-        </header>
+        <Header style={{position:"fixed",width:"100%",
+
+          background:`${(props.glass)?"rgba(0,0,0,1)":"linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 80%)"}`}}>
+          <Navbar glass={props.glass} user={props.user}/>
+        </Header>
         <HomeWrapper>
           <div>
-            <img src="/heading.svg" alt="" />
+            <img src="/heading.svg" alt="" style={{marginTop:"80px"}}/>
           </div>
           <div style={{ display: "flex", gap: "60px", alignItems: "center" }}>
             <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
-              <Content $size="18px" $color="white">
-                <p style={{ width: "25vw" }}>
-                  Your anchor to seasoned places and plates across India. <br />
-                  Enjoy the true beauty of India with Vitti, your personalized
-                  travel companion.
+              <Content $size="22px" $color="white">
+                <p style={{ width: "28vw" }}>
+                Your anchor to seasoned places and unexplored regions across India.
+                <br />
+                Enjoy the beauty of India with Vitti, your own personalized travel companion.
                 </p>
               </Content>
               <Button style={{ width: "80%" }}>Begin Journey</Button>
