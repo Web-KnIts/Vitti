@@ -27,16 +27,16 @@ const Footer = () => {
             <Sitemap>
               <h3 style={{fontSize:'28px',color:"white",marginBottom:"20px"}}>Sitemap</h3>
               <nav style={{listStyle:"none",color:"white",fontSize:"24px"}}>
-                <li><a href="#" style={{textDecoration:"none",color:"white"}}>Home</a></li>
-                <li><a href="#About-Vitti" style={{textDecoration:"none",color:"white"}}>About Us</a></li>
-                <li> <a href="#Travel-Planner" style={{textDecoration:"none",color:"white"}}>Travel Planner</a> </li>
-                <li> <a href="#contact-us"  style={{textDecoration:"none",color:"white"}}>Contact Us</a></li>
+                <li><a className='hover-effect' href="#" style={{textDecoration:"none",color:"white"}}>Home</a></li>
+                <li><a className='hover-effect' href="#About-Vitti" style={{textDecoration:"none",color:"white"}}>About Us</a></li>
+                <li> <a className='hover-effect' href="#Travel-Planner" style={{textDecoration:"none",color:"white"}}>Travel Planner</a> </li>
+                <li> <a className='hover-effect' href="#contact-us"  style={{textDecoration:"none",color:"white"}}>Contact Us</a></li>
               </nav> 
             </Sitemap>
             <Sitemap>
             <h3 style={{fontSize:'28px',color:"white",marginBottom:"20px"}}>Social Media</h3>
               <nav style={{listStyle:"none",color:"white",fontSize:"24px"}}>
-                <li>Instagram</li>
+                <li><a className='hover-effect' href="" target="_blank" style={{textDecoration:"none",color:"white"}}>Travel Planner</a> Instagram</li>
                 <li>Linkedin</li>
               </nav> 
             </Sitemap>
