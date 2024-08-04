@@ -1,6 +1,9 @@
 import { useState } from "react";
-import styled from "styled-components";
-import { Container } from "./FindSurfExplore";
+import styled, { keyframes } from "styled-components";
+import { Content } from "../common/content";
+import { SecondHeading } from "../common/secondHeading";
+import { Container } from "../common/container";
+import {Button} from "../common/button"
 
 const StyledInput = {
     width: "100%",
@@ -10,14 +13,10 @@ const StyledInput = {
     fontWeight: 400,
     outline: "none",
     fontFamily: "Poppins",
-    padding: "15px 20px"
+    padding: "15px 20px",
+    marginBottom:"10px"
 };
 
-export const SecondHeading = styled.h3`
-color:${(props)=>props.$color || "black"};
-font-size:${(props)=>props.$size || "40px"};
-font-weight:${(props)=>props.$weight || 600};
-`
 
 const PlannerWrapper = styled.div`
     width: 72vw;
@@ -26,6 +25,11 @@ const PlannerWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     color: white;
+
+    @media (max-width:1280px){
+        width:80vw;
+    }
+
 `;
 
 export const Heading = styled.div`
@@ -36,16 +40,16 @@ export const Heading = styled.div`
     font-weight: 500;
     font-size: 75px;
     }
+
+    @media (max-width:1280px)
+    {
+        h1{
+        font-size:60px;
+        }
+    }
+
 `;
 
-export const Content = styled.div`
-    color:${(props)=>props.$color ||"black" };
-    font-size:${(props)=> props.$size || "18px"};
-    font-weight: normal;
-    text-align: left;
-    width: 100%;
-    font-family:Visby;
-`;
 
 const Form = styled.form`
     width: 100%;
@@ -54,24 +58,6 @@ const Form = styled.form`
     gap: 20px;
 `;
 
-export const Button = styled.button`
-    width: 100%;
-    font-size: 20px;
-    padding: 15px 15px;
-    border-radius: 10px;
-    color: white;
-    background-color: rgb(35, 124, 255);
-    background: linear-gradient(0deg, rgba(35, 124, 255, 1) 0%, rgba(3, 115, 243, 1) 100%);
-    text-transform: capitalize;
-    font-weight: 500;
-    font-family:Visby;
-    transition: background-color 10s ease, box-shadow 0.3s ease;
-    &:hover {
-        background: rgb(249, 109, 0);
-        background: linear-gradient(0deg, rgba(249, 109, 0, 1) 0%, rgba(235, 153, 110, 1) 100%);
-        box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.25);
-    }
-`;
 
 function TravelPlanner() {
     const [formData, setFormData] = useState({
@@ -100,14 +86,14 @@ function TravelPlanner() {
                         <h1>Plan Your</h1>
                         <h1>Trips</h1>
                     </Heading>
-                    <Content $color={"white"}>
+                    <Content $color={"white"} $lg_responsive={{$size:"18px !important"}}>
                         <p>
                         Vitti makes planning your diverse travel desires effortless with just a click. Browse our extensive catalog of destinations, accommodations, and dining options to ensure a seamless travel experience.
                         </p>
                     </Content>
                 </div>
                 <div style={{ flexBasis: "35%", display: "flex", flexDirection: "column" }}>
-                    <SecondHeading $color="white" style={{paddingBottom: "40px" }}>
+                    <SecondHeading $color="white" style={{paddingBottom: "40px"}} $lg_responsive={{$paddingBottom:"30px !important",$size:"35px !important"}}>
                         Travel Planner
                     </SecondHeading>
                     <Form onSubmit={handleSubmit}>

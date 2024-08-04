@@ -1,7 +1,6 @@
 import React from "react";
-import { Container } from "./FindSurfExplore";
+import { Container } from "../common/container";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const FooterWrapper = styled.div`
   width: 85%;
@@ -36,8 +35,8 @@ const Footer = () => {
             <Sitemap>
             <h3 style={{fontSize:'28px',color:"white",marginBottom:"20px"}}>Social Media</h3>
               <nav style={{listStyle:"none",color:"white",fontSize:"24px"}}>
-                <li><a className='hover-effect' href="" target="_blank" style={{textDecoration:"none",color:"white"}}>Travel Planner</a> Instagram</li>
-                <li>Linkedin</li>
+                <li><a className='hover-effect' href="" target="_blank" style={{textDecoration:"none",color:"white"}}> Instagram</a></li>
+                <li><a className='hover-effect' href="" target="_blank" style={{textDecoration:"none",color:"white"}}> Linkedin</a></li>
               </nav> 
             </Sitemap>
         </Handles>

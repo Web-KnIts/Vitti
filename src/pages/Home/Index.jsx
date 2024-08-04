@@ -8,32 +8,32 @@ import AboutVitti from '../../components/AboutVitti'
 import Footer from '../../components/Footer'
 import Home from '../../components/Home'
 
-function Index({user}) {
+function Index() {
 
-  const [glass,setGlass] = useState(false)
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setGlass(true);
-      } else {
-        setGlass(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); 
+  // const [glass,setGlass] = useState(false)
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 100) {
+  //       setGlass(true);
+  //     } else {
+  //       setGlass(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []); 
   return (
     <>
-    <Home glass={glass} user={user}/>
+    <Home/>
     <main>
     <FindSurfExplore/>
     <TravelPlanner/>
     <ConnectTraveler/>
     <Reviews/>
     <Promotion/>
-    <AboutVitti/>
+    {/* <AboutVitti/> */}
     </main>
     <footer>
       <Footer/>

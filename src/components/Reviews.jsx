@@ -1,8 +1,10 @@
 import React from 'react'
-import { Container } from './FindSurfExplore'
+import { Container } from '../common/container'
 import styled from 'styled-components'
-import { SecondHeading,Content} from './TravelPlanner'
-import { HeadingWrapper,SmallHeading } from './ConnectTraveler'
+import {Content} from "../common/content"
+import { HeadingWrapper } from '../common/headingWrapper'
+import { SecondHeading } from '../common/secondHeading'
+import { SmallHeading } from '../common/smallHeading'
 
 const ReviewWrapper = styled.div`
 width:72vw;

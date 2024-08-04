@@ -1,9 +1,12 @@
 import React from 'react'
-import { Container } from './FindSurfExplore'
 import styled from 'styled-components'
-import { Content, SecondHeading } from './TravelPlanner'
-import { HeadingWrapper, SmallHeading } from './ConnectTraveler'
+import { SecondHeading } from '../common/secondHeading'
 import {TeamMember} from "./Data.json"
+import { Container } from '../common/container'
+import { Content } from '../common/content'
+import { HeadingWrapper } from '../common/headingWrapper'
+import { SmallHeading } from '../common/smallHeading'
+
 const About = styled.div`
 width:72vw;
 margin:auto;

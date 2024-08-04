@@ -7,25 +7,40 @@ import { ToastContainer } from 'react-toastify'
 import Login from "./Authcomponents/login.jsx"
 import Register from "./Authcomponents/register.jsx"
 import { auth } from './Authcomponents/firebase.js'
+import { AuthContext } from './Authcomponents/useAuthContext.js';
+
+
 // import LocomotiveScroll from "locomotive-scroll"
+// const Locomotive = new LocomotiveScroll();
 function App() {
-  const [user, setUser] = useState(null);
-  // const Locomotive = new LocomotiveScroll();
+  const [user, setUser] = useState(true);
+
+  const [glass,setGlass] = useState(false)
   useEffect(() => {
-    // auth.onAuthStateChanged((user) => {
-    //   setUser(user);
-    // });
-  });
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setGlass(true);
+      } else {
+        setGlass(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
+    <AuthContext.Provider value={{glass,user,setUser}}> 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home user={user}/>}/>
+          <Route path="/" element={<Home />}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
         </Routes>
         <ToastContainer />
       </BrowserRouter>
+      </AuthContext.Provider>
     </>
   )
 }
