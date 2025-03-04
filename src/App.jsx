@@ -10,10 +10,10 @@ import { auth } from './Authcomponents/firebase.js'
 import { AuthContext } from './Authcomponents/useAuthContext.js';
 
 
-// import LocomotiveScroll from "locomotive-scroll"
-// const Locomotive = new LocomotiveScroll();
+import LocomotiveScroll from "locomotive-scroll"
+const Locomotive = new LocomotiveScroll();
 function App() {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
 
   const [glass,setGlass] = useState(false)
   useEffect(() => {

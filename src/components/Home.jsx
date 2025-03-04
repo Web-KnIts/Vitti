@@ -141,7 +141,7 @@ const Home = () => {
               : "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 80%)",
           }}
         >
-          {/* <Navbar glass={glass} /> */}
+          <Navbar glass={glass} />
         </Header>
         <HomeWrapper>
           <div>

@@ -60,20 +60,20 @@ const AboutVitti = () => {
         <Team>
         <HeadingWrapper $mb="120px">
           <SecondHeading $weight={900} $size="50px" $color="white">
-          Our Wonderful Team
+           Our {/*Wonderful*/} Team 
           </SecondHeading>
-          <SmallHeading $size="20px" $weight="medium" $color="#707070">
+          {/* <SmallHeading $size="20px" $weight="medium" $color="#707070">
           Without whom Vitti wouldn't be a delightful travel experience
-          </SmallHeading>
+          </SmallHeading> */}
         </HeadingWrapper>  
-        <div style={{width:"90%",margin:"auto"}}>
+        {/* <div style={{width:"90%",margin:"auto"}}>
             <img src="/2k24.png" alt="sanskar-founder" style={{width:"100%"}} /> 
             <Content $size="18px" $color="white">
                         <p style={{width:"20%",wordSpacing:"-1px",marginLeft:"20px"}}>
                         Founded in 2024 by<br/> Sanskar Verma, a <br/>  student and founder of a <br/>  new travel experience.
                         </p>
             </Content>
-        </div>
+        </div> */}
 
         <div style={{width:"90%",margin:"auto",display:"grid",gridTemplateColumns:"repeat(3,auto)",justifyContent:"center",alignContent:"center",rowGap:"49px",columnGap:"133px",marginTop:"80px"}}>
           {

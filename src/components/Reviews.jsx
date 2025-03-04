@@ -69,7 +69,7 @@ const Reviews = () => {
   return (
     <Container $padding="200px 0px" id="client-reviews">
         <HeadingWrapper $mb="120px">
-          <SecondHeading $weight={900} $size="50px">
+          <SecondHeading $weight={900} $size="50px" $lg_responsive={{$size:"45px"}}>
           Hear from our explorers
           </SecondHeading>
           <SmallHeading $size="18px" $weight="medium" style={{marginTop:"35px"}}>

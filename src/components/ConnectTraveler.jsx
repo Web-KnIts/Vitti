@@ -16,8 +16,6 @@ const scroll = keyframes`
 `
 
 
-
-
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
