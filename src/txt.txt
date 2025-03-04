@@ -1,0 +1,78 @@
+// "TeamMember": [
+//   {
+//     "id": 1201,
+//     "name": "sanskar",
+//     "role": "Back - end Dev"
+//   },
+//   {
+//     "id": 1202,
+//     "name": "fatima",
+//     "role": "Front - end Dev"
+//   },
+//   {
+//     "id": 1203,
+//     "name": "lakshay",
+//     "role": "Front - end Dev"
+//   },
+//   {
+//     "id": 1204,
+//     "name": "sahil",
+//     "role": "UI/UX Designer"
+//   },
+//   {
+//     "id": 1205,
+//     "name": "biswajit",
+//     "role": "UI/UX Designer"
+//   },
+//   {
+//     "id": 1206,
+//     "name": "vaibhav",
+//     "role": "Front - end Dev"
+//   },
+//   {
+//     "id": 1207,
+//     "name": "parul",
+//     "role": "Marketing Strategist"
+//   },
+//   {
+//     "id": 1208,
+//     "name": "nirmit",
+//     "role": "Marketing Analyst"
+//   },
+//   {
+//     "id": 1209,
+//     "name": "ansh",
+//     "role": "HR Manager"
+//   },
+//   {
+//     "id": 1210,
+//     "name": "tashvi",
+//     "role": "Content Strategist"
+//   },
+//   {
+//     "id": 1211,
+//     "name": "bhavna",
+//     "role": "Cinematographer"
+//   },
+//   {
+//     "id": 1212,
+//     "name": "aman",
+//     "role": "Visuals Team"
+//   },
+//   {
+//     "id": 1213,
+//     "name": "prabhjot",
+//     "role": "Data Collection & Analyst"
+//   },
+//   {
+//     "id": 1214,
+//     "name": "abhinav",
+//     "role": "Data Collection & Analyst"
+//   },
+//   {
+//     "id": 1215,
+//     "name": "navya",
+//     "role": "Product Developer"
+//   }
+
+// ]

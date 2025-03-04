@@ -1,11 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
-import { SecondHeading,Content} from './TravelPlanner'
-import { HeadingWrapper,SmallHeading } from './ConnectTraveler'
-import { Container } from './FindSurfExplore'
+import { SecondHeading} from '../common/secondHeading'
+import {SmallHeading } from '../common/smallHeading'
+import { Container } from '../common/container'
+import { HeadingWrapper } from '../common/headingWrapper'
 const Promotion = () => {
   return (
-    <Container $height="540px" style={{backgroundImage:`url("/bluebackground.png")`,backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:"60px"}} id="Download-Mobile">
+    <Container $height="" style={{backgroundImage:`url("/bluebackground.png")`,backgroundSize:"cover",display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:"60px"}} id="Download-Mobile">
         <HeadingWrapper>
           <SecondHeading $weight="bolder" $size="50px" $color="white" style={{display:"flex",gap:"28px",justifyContent:"center",alignItems:"center"}}>
           Explore the  

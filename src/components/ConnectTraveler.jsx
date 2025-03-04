@@ -1,26 +1,40 @@
-import styled from "styled-components";
-import { Container } from "./FindSurfExplore";
-import { Button, SecondHeading } from "./TravelPlanner";
+import styled, { keyframes } from "styled-components";
+import { Container } from "../common/container";
+import {Button} from "../common/button"
 import { checkbox, TravelCard } from "./Data.json";
 import Card from "./Card";
+import { SecondHeading} from "../common/secondHeading"
+import { HeadingWrapper } from "../common/headingWrapper";
+import { SmallHeading } from "../common/smallHeading";
+const scroll = keyframes`
+0%{
+    tarnsform:translateX(100%);
+}
+    100%{
+    transform:translateX(-100%);
+    }
+`
 
-export const SmallHeading = styled.h4`
-  margin:auto;
-  color: ${(props) => props.$color || "black"};
-  font-size: ${(props)=>props.$size || "22px"};
-  font-weight: ${(props) => props.$weight || "normal"};
-`;
-export const HeadingWrapper = styled.div`
-  width: 100%;
-  text-align: center;
-  margin-bottom: ${(props) => props.$mb || "50px"};
-`;
+
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
 `;
 
+const ScrollWrapper = styled.div`
+position:relative;
+display:flex;
+width:100%;
+overflow-x:hidden;
+scrollbar-width:none;
+
+`
+const InnerWrapper = styled.div`
+white-space:nowrap;
+display: inherit;
+animation:${scroll} 20s linear infinite;
+`
 function ConnectTraveler() {
   return (
     <>
@@ -42,11 +56,12 @@ function ConnectTraveler() {
             justifyContent: "center",
             alignItems: "center",
             margin: "auto",
+            gap:"90px"
           }}
         >
-           {/*<div>
-          <img src="/MobilePhone.png" alt="Mobile-Image" style={{height:"900px",scale:2.8,objectFit:"cover"}} />
-        </div>*/} 
+        {/* <div>
+          <img src="/mobile.png" alt="Mobile-Image" className='box-shadow' style={{height:"900px",scale:2.8,objectFit:"cover"}} />
+        </div>  */}
           <div
             style={{
               display: "flex",
@@ -82,7 +97,7 @@ function ConnectTraveler() {
                 );
               })}
             </ContentWrapper>
-            <Button>Join Our Community</Button>
+            <Button className="btn-hover">Join Our Community</Button>
           </div>
         </Container>
       </Container>
@@ -93,21 +108,16 @@ function ConnectTraveler() {
         }}
       >
         <HeadingWrapper>
-          <SecondHeading $color="white" $weight="bold">
+          <SecondHeading $color="white" $weight={400}>
             Discover the true way of travelling
           </SecondHeading>
-          <SmallHeading $color="white" $weight="medium">
+          <SmallHeading $color="white" $weight={200}>
             Check out the different features on our app to become a veteran
             explorer{" "}
           </SmallHeading>
         </HeadingWrapper>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-          }}
-        >
+        <ScrollWrapper>
+          <InnerWrapper>
           {TravelCard.map((data) => {
             return (
               <Card key={data.id}>
@@ -116,7 +126,18 @@ function ConnectTraveler() {
               </Card>
             );
           })}
-        </div>
+          </InnerWrapper>
+          <InnerWrapper >
+          {TravelCard.map((data) => {
+            return (
+              <Card key={data.id}>
+                <img src={data.img} alt="" style={{objectFit:"cover"}}/>
+                <p style={{ color: "white",position:"absolute",bottom:"20px" }}>{data.title}</p>
+              </Card>
+            );
+          })}
+          </InnerWrapper>
+        </ScrollWrapper>
       </Container>
     </>
   );
